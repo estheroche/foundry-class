@@ -1,16 +1,13 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "openzeppelin-contracts/contracts/token/ERC721/IERC721.sol";
-import "openzeppelin-contracts/contracts/access/Ownable.sol";
-import "openzeppelin-contracts/contracts/utils/Counter.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
-import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
+import "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol";
+import "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
+import "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
+import "lib/openzeppelin-contracts/utils/cryptography/ECDSA.sol";
 
 contract MyContract {
-    using Counters for Counters.Counter;
-    Counters.Counter public CounterTesttokenId;
-
     uint256 public listingPrice = 0.0025 ether;
     using ECDSA for bytes32;
 
